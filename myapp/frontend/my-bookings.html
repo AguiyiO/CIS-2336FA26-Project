@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bookings - UH Student Center</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar" aria-label="Main navigation">
+    <span class="brand">UH Student Center Rooms</span>
+    <a href="index.html">Home</a>
+    <a href="booking.html">Book a Room</a>
+    <a href="my-bookings.html" class="active" aria-current="page">My Bookings</a>
+  </nav>
+
+  <main>
+    <h1>Current Bookings</h1>
+    <p>View all club reservations. Cancel a booking when you no longer need the room.</p>
+    <p id="bookings-status" class="status-message" role="status" aria-live="polite"></p>
+    <div id="bookings-list">
+      <!-- Booking items are inserted here by js/my-bookings.js -->
+      <p>Loading bookings...</p>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/my-bookings.js"></script>
+</body>
+</html>

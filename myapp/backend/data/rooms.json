@@ -1,0 +1,37 @@
+[
+  {
+    "id": "r1",
+    "name": "Bayou City Room",
+    "capacity": 12,
+    "equipment": ["Projector", "Whiteboard", "Conference Phone"],
+    "foodAllowed": true
+  },
+  {
+    "id": "r2",
+    "name": "Cullen Room",
+    "capacity": 8,
+    "equipment": ["TV Screen", "Whiteboard"],
+    "foodAllowed": false
+  },
+  {
+    "id": "r3",
+    "name": "Rockwell Room",
+    "capacity": 20,
+    "equipment": ["Projector", "Microphone", "Whiteboard"],
+    "foodAllowed": true
+  },
+  {
+    "id": "r4",
+    "name": "Champion Room",
+    "capacity": 6,
+    "equipment": ["TV Screen"],
+    "foodAllowed": false
+  },
+  {
+    "id": "r5",
+    "name": "Cougar Den",
+    "capacity": 30,
+    "equipment": ["Projector", "Stage Microphone", "Speakers"],
+    "foodAllowed": true
+  }
+]

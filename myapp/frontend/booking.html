@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Room - UH Student Center</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar" aria-label="Main navigation">
+    <span class="brand">UH Student Center Rooms</span>
+    <a href="index.html">Home</a>
+    <a href="booking.html" class="active" aria-current="page">Book a Room</a>
+    <a href="my-bookings.html">My Bookings</a>
+  </nav>
+
+  <main>
+    <h1>Book a Room</h1>
+    <p>Choose a room and meeting time for your student club. All fields except purpose are required.</p>
+
+    <form id="booking-form">
+      <label for="room-select">Room</label>
+      <select id="room-select" name="roomId" required disabled>
+        <option value="">-- Select a room --</option>
+        <!-- Options are filled in by js/booking.js -->
+      </select>
+
+      <label for="club-name">Club Name</label>
+      <input type="text" id="club-name" name="clubName" placeholder="e.g. Chess Club" required />
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="start-time">Start Time</label>
+      <input type="time" id="start-time" name="startTime" required />
+
+      <label for="end-time">End Time</label>
+      <input type="time" id="end-time" name="endTime" required />
+
+      <label for="purpose">Purpose <span class="optional">(optional)</span></label>
+      <textarea id="purpose" name="purpose" rows="3" placeholder="What is this meeting for?"></textarea>
+
+      <button type="submit" disabled>Submit Booking</button>
+    </form>
+
+    <p id="form-status" class="status-message" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

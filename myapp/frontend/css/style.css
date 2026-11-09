@@ -1,0 +1,278 @@
+/* ---------- Basic reset & page setup ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 36px 20px 64px;
+}
+
+h1, h2 {
+  color: #c8102e; /* UH red */
+}
+
+h1 {
+  line-height: 1.2;
+  margin-top: 12px;
+}
+
+a {
+  color: #a10d24;
+}
+
+:focus-visible {
+  outline: 3px solid #176da6;
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ---------- Navigation bar ---------- */
+nav.navbar {
+  background-color: #c8102e; /* UH red */
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-bottom: 4px solid #960c23;
+}
+
+nav.navbar .brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: auto;
+}
+
+nav.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav.navbar a:hover,
+nav.navbar a.active {
+  text-decoration: underline;
+}
+
+/* ---------- Room cards (index.html) ---------- */
+.room-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.room-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #c8102e;
+  overflow-wrap: anywhere;
+}
+
+.room-card h3 {
+  margin-top: 0;
+  color: #c8102e;
+}
+
+.room-card ul {
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+.equipment-label {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.room-book-link {
+  display: block;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.badge.food-yes {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge.food-no {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* ---------- Forms (booking.html) ---------- */
+form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 560px;
+  margin-top: 16px;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  min-width: 0;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.optional {
+  color: #555;
+  font-weight: normal;
+}
+
+form button {
+  margin-top: 16px;
+  background-color: #c8102e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #a10d24;
+}
+
+/* ---------- Bookings list (my-bookings.html) ---------- */
+.booking-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.booking-item > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.booking-item h2 {
+  font-size: 1.2rem;
+  margin: 0 0 4px;
+}
+
+.booking-item p {
+  margin: 4px 0;
+}
+
+.booking-club {
+  font-weight: bold;
+}
+
+.booking-item button {
+  background-color: #721c24;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+  flex-shrink: 0;
+}
+
+.booking-item button:hover {
+  background-color: #4f151a;
+}
+
+/* ---------- Status / helper messages ---------- */
+.status-message {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.error {
+  color: #a10d24;
+}
+
+.status-message.success {
+  color: #1a7a31;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+@media (max-width: 600px) {
+  nav.navbar {
+    padding: 16px;
+    gap: 10px 20px;
+  }
+
+  nav.navbar .brand {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 24px 16px 40px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .booking-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  form {
+    padding: 16px;
+  }
+}
