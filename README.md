@@ -1,8 +1,6 @@
 # UH Student Center Room Booking
 
-Completed CIS 2336 project for browsing meeting rooms, making reservations,
-and viewing or canceling bookings. Built with HTML, CSS, JavaScript, and an
-Express API that persists reservations in JSON files.
+CIS 2336 project for booking and making reservations. 
 
 ## Run the app
 
